@@ -7,13 +7,14 @@
   <div class="card">
     <div class="card-content">
       <span class="card-title">{{ art.name }}</span>
-      <p>Breed: {{ art.breed }}</p>
+      <p>Culture: {{ art.culture }}</p>
       <p>Description: {{ art.description }}</p>
       {% if art.age > 0 %}
         <p>Age: {{ art.age }}</p>
       {% else %}
         <p>Age: New Art</p>
       {% endif %}
+      <p>Origin: {{ art.origin }}</p>
     </div>
   </div>
 {% endfor %}

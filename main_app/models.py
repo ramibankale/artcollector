@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 # Create your models here.
 class Art(models.Model):
@@ -12,3 +14,6 @@ class Art(models.Model):
     # therefore no makemigration is necessary 
     def __str__(self):
         return f'{self.name} ({self.id})'
+
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'art_id': self.id})

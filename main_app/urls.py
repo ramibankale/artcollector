@@ -10,4 +10,11 @@ urlpatterns = [
   path('arts/<int:pk>/update/', views.ArtUpdate.as_view(), name='arts_update'),
   path('arts/<int:pk>/delete/', views.ArtDelete.as_view(), name='arts_delete'),
   path('arts/<int:art_id>/add_display/', views.add_display, name='add_display'),
+  path('arts/<int:art_id>/assoc_museum/<int:museum_id>/', views.assoc_museum, name='assoc_museum'),
+  path('arts/<int:art_id>/unassoc_museum/<int:museum_id>/', views.unassoc_museum, name='unassoc_museum'),
+  path('museums/', views.MuseumList.as_view(), name='museums_index'),
+  path('museums/<int:pk>/', views.MuseumDetail.as_view(), name='museums_detail'),
+  path('museums/create/', views.MuseumCreate.as_view(), name='museums_create'),
+  path('museums/<int:pk>/update/', views.MuseumUpdate.as_view(), name='museums_update'),
+  path('museums/<int:pk>/delete/', views.MuseumDelete.as_view(), name='museums_delete'),
 ]

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Museum List</h1>
+
+{% for museum in museum_list %}
+  <a href="{% url 'museums_detail' museum.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ museum.name }}</span>
+            <p>Location: {{ location.color }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
